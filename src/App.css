@@ -1,0 +1,99 @@
+.App {
+    width: 100%;
+    min-height:100vh ;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+.App__box{
+    font-size:12.5vh ;
+}
+.box {
+    border:0.4px  dashed rgb(64,93,194);
+    background: linear-gradient(90deg, rgba(96,178,235,0.5970763305322129) 0%, rgba(255,195,110,0.5046393557422969) 100%);
+    padding:2.5em  0.5em;
+    border-radius: 0.7em;
+    width:100%;
+    max-width: 500px ;
+}
+.box__tittle {
+   text-align:center;
+   font-size: 2rem;
+}
+.box__sub {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom:2em ;
+}
+.box__body {
+    display: grid;
+    grid-template-columns: 2fr 3fr ;
+    align-items:center ;
+    gap: 4em;
+    margin-bottom: 1em;
+}
+.box__inf-tit {
+    text-align: center;
+    margin-bottom:0.5em ;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.box__inf-body {
+   display:grid;
+   gap:1em;  
+}
+.box__inf-item {
+  font-size: 1.5rem;
+  display: flex;
+  grid-template-columns:repeat( 2 1fr ) ;
+  font-weight: 300; 
+}
+
+.box__inf-label {
+   font-weight:400 ; 
+}
+.box__footer {
+   display: flex;
+   flex-direction: column;
+   align-items:center ;
+}
+.box__temperature {
+  margin-bottom: 0.7em; 
+}
+.box__btn{
+   font-size:0.9rem ; 
+   padding:0.8em 1em ;
+   border-radius:0.3rem ;
+   box-shadow: 0.2em 0.2em 0.6em #000a;
+   filter: brightness(0.95);
+   transition: filter  100ms ease , transform 100ms ease ;
+   cursor: pointer;
+}
+.box__btn:hover {
+  filter: brightness(1);
+  transform: scale(1.05);
+  color: rgba(12, 48, 139, 0.537);
+}
+
+.back__video{
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media( min-aspect-ratio: 16/9 ){
+    .back__video{
+        width: 100%; 
+        height: auto;
+    }
+}
+@media( max-aspect-ratio: 16/9 ){
+    .back__video{
+        width: auto; 
+        height: 100%;
+    }
+}
